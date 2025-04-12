@@ -273,7 +273,7 @@ input[type=range]::-moz-range-thumb {
   padding-block: 203px 202px;
 }
 .hero-section {
-  background: url("/assets/img/hero.jpg") center center;
+  background: url("../img/hero.jpg") center center;
   background-size: cover;
 }
 .hero__list {
@@ -292,7 +292,7 @@ input[type=range]::-moz-range-thumb {
 
 .registration-section {
   padding-block: 120px 150px;
-  background: url("/assets/img/registration-bg.jpg") center center;
+  background: url("../img/registration-bg.jpg") center center;
   background-size: cover;
 }
 .registration__title {
