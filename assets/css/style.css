@@ -54,6 +54,11 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
+@media (max-width: 661px) {
+  h1 {
+    font-size: 20px;
+  }
+}
 
 h2 {
   font-size: 36px;
@@ -66,7 +71,6 @@ a {
   align-items: center;
   gap: 10px;
   font-size: 13px;
-  color: #C3C3C3;
   transition: color 0.3s;
 }
 a:hover, a.active {
@@ -312,6 +316,7 @@ input[type=range]::-moz-range-thumb {
 @media (max-width: 1024px) {
   .registration__list {
     justify-content: center;
+    gap: 24px;
   }
 }
 .registration__list .list-item {
@@ -377,6 +382,11 @@ input[type=range]::-moz-range-thumb {
   gap: 12px;
   font-size: 18px;
 }
+@media (max-width: 1024px) {
+  .registration .form .form__range .range__label {
+    font-size: 15px;
+  }
+}
 .registration .form .button-xl:last-child {
   grid-column: 2;
 }
@@ -408,6 +418,12 @@ input[type=range]::-moz-range-thumb {
   flex-wrap: wrap;
   column-gap: 38px;
   row-gap: 14px;
+}
+.footer__pyment .payment-type, .footer__social .payment-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
 }
 .footer__pyment a, .footer__social a {
   width: max-content;

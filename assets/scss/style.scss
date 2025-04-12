@@ -160,6 +160,7 @@
 
         @include media('tablet') {
             justify-content: center;
+            gap: 24px;
         }
 
         .list-item {
@@ -234,6 +235,10 @@
                 gap: 12px;
 
                 font-size: $font-18;
+
+                @include media('tablet') {
+                    font-size: $font-15;
+                }
             }
         }
 
@@ -273,6 +278,14 @@
         flex-wrap: wrap;
         column-gap: 38px;
         row-gap: 14px;
+
+        .payment-type {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            width: max-content;
+        }
 
         a {
             width: max-content;
