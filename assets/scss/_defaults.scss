@@ -1,0 +1,166 @@
+@use 'variables' as *;
+
+body {
+    font-family: $font-lato;
+    color: $white;
+    font-size: $font-20;
+}
+
+h1 {
+    font-size: $font-48;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: $font-36;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: $font-13;
+    color: $gray-light-85;
+
+    transition: color .3s;
+
+    &:hover,
+    &.active {
+        color: $blue-secondary;
+    }
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 183px;
+    height: 43px;
+
+    background-color: $blue-light;
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $white;
+
+    font-size: $font-13;
+    text-transform: uppercase;
+
+    transition: filter .3s;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(85%);
+    }
+
+    &.secondary {
+        background-color: $white;
+        border-color: $gray-cool;
+        color: $green-dark;
+    }
+
+    &.button-xl {
+        width: 100%;
+    }
+}
+
+input {
+    border-radius: 3px;
+    padding: 12px 10px;
+
+    &::placeholder {
+        color: $gray-dark-100;
+    }
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    border-radius: 3px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border: 1px solid $white;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: $blue-primary;
+        cursor: pointer;
+        border: 3px solid $blue-medium;
+        border-radius: 50%;
+    }
+
+    &::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #04AA6D;
+        cursor: pointer;
+    }
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    color: $gray-dark-100;
+    user-select: none;
+
+    .select-selected {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 100%;
+        background-color: $white;
+        padding: 12px 10px;
+        border: 1px solid #2c2929;
+        border-radius: $border-radius;
+        cursor: pointer;
+
+        .select-arrow {
+            transition: transform .3s;
+        }
+
+        &.select-arrow-active {
+            .select-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .select-items {
+        position: absolute;
+        background-color: $white;
+        border: 1px solid #2c2929;
+        border-top: none;
+        border-radius: 0 0 $border-radius $border-radius;
+        width: 100%;
+        z-index: 2;
+        display: none;
+        max-height: 200px;
+        overflow-y: scroll;
+
+        div {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+}
+
+.secondary-color {
+    color: $blue-light;
+}
